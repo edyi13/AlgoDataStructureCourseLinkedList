@@ -1,6 +1,6 @@
 using System;
 
-public class CustomLinkedList
+public class CustomDoubleLinkedList
     {
         public Node head;
         public Node tail;        

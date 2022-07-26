@@ -96,4 +96,27 @@ public class CustomLinkedList
 
             return currNode;
         }
+
+  public object[] Reverse()
+        {
+            if (head.next == null)
+            {
+                return GetList();
+            }
+            tail = head;
+            //Console.WriteLine("tail");
+            //Console.WriteLine(JsonSerializer.Serialize(tail));
+            Node first = head;
+            Node second = (Node)first.next;
+            while (second != null)
+            {
+                Node temp = (Node)second.next;
+                second.next = first;
+                first = second;
+                second = temp;
+            }
+            head.next = null;
+            head = first;
+            return GetList();
+        }
     }
